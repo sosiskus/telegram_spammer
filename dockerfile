@@ -9,14 +9,12 @@ COPY ./main.py ./
 COPY ./session.session ./
 
 RUN pip install telethon pause
-RUN ls
-RUN ls ../
+RUN python --version
 
 ## Deploy
 FROM gcr.io/distroless/base-debian11
 
-CMD ["main.py"]
-ENTRYPOINT ["python3"]
+CMD ["python", "./main.py"]
 
 
 USER root:root
