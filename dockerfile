@@ -13,7 +13,8 @@ RUN pip install pause
 RUN ls
 RUN ls ../
 
-CMD ["python", "./main.py"]
+ENTRYPOINT ["python"]
+CMD ["main.py"]
 
 ## Deploy
 FROM gcr.io/distroless/base-debian11
