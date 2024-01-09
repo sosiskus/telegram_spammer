@@ -20,10 +20,10 @@ FROM gcr.io/distroless/base-debian11
 
 WORKDIR /
 
-COPY --from=build /app/telegram_spammer /telegram_spammer
+COPY --from=build /app/ /
 
 EXPOSE 80/tcp
 
 USER root:root
 
-ENTRYPOINT ["/telegram_spammer"]
+ENTRYPOINT ["/"]
