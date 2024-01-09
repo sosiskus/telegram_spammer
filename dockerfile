@@ -15,7 +15,7 @@ RUN ls ../
 ## Deploy
 FROM gcr.io/distroless/base-debian11
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["python"]
 CMD ["main.py"]
 
 USER root:root
