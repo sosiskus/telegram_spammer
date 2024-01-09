@@ -10,6 +10,9 @@ COPY ./session.session ./
 
 RUN pip install telethon
 RUN pip install pause
+RUN ls
+RUN cd ..
+RUN ls
 
 CMD ["python"]
 
