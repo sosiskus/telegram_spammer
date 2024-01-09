@@ -12,4 +12,4 @@ RUN pip install telethon pause
 RUN ls
 RUN python --version
 
-ENTRYPOINT ["python3", "app.py"]
+ENTRYPOINT ["python3", "main.py"]
