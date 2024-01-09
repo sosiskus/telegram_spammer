@@ -16,7 +16,7 @@ RUN ls ../
 FROM gcr.io/distroless/base-debian11
 
 CMD ["main.py"]
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
 
 
 USER root:root
