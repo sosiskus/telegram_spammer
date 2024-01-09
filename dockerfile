@@ -18,14 +18,4 @@ CMD ["python", "./main.py"]
 ## Deploy
 FROM gcr.io/distroless/base-debian11
 
-WORKDIR /
-
-COPY --from=build /app/photo.jpg /photo.jpg
-COPY --from=build /app/main.py /main.py
-COPY --from=build /app/session.session /session.session
-
-EXPOSE 80/tcp
-
 USER root:root
-
-ENTRYPOINT ["python", "./main.py"]
