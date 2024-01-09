@@ -8,11 +8,11 @@ import time
 import pause
 import datetime
 
-API_ID = int(24027111)
-API_HASH = str("87519f03ba35d130599dbf59f9096515")
-PHONE = str("+37128894819")
+API_ID = int(19434485)
+API_HASH = str("deaf79fb8646f05cae3239d58497a3cf")
+PHONE = str("+37126425568")
 
-TARGETS = ["https://t.me/SoSiSkuS_14", "https://t.me/phoneRigaa", "https://t.me/latvia10", "https://t.me/latgalite", "https://t.me/vipsaleee", "https://t.me/balticmarket1", "https://t.me/tirdzins", "https://t.me/baraholkalatvija", "https://t.me/BigBazzaar", "https://t.me/gribupardot", "https://t.me/buylatvija"]
+TARGETS = ["https://t.me/SoSiSkuS_14"]
 PHOTO_LOC = str('photo.jpg')
 TEXT = str("""📱Есть iPhone?📱
 Мы готовы купить у вас этот телефон!
