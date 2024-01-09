@@ -7,13 +7,11 @@ WORKDIR /app
 COPY ./photo.jpg ./
 COPY ./main.py ./
 COPY ./session.session ./
-COPY *.go ./
 
 RUN pip install telethon
 RUN pip install pause
-RUN python ./main.py
 
-# CMD ["./csdd"]
+CMD ["python"]
 
 ## Deploy
 FROM gcr.io/distroless/base-debian11
