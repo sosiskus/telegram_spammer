@@ -13,16 +13,16 @@ API_HASH = str("deaf79fb8646f05cae3239d58497a3cf")
 PHONE = str("+37126425568")
 
 TARGETS = [ "https://t.me/SoSiSkuS_14",
-            "https://t.me/buylatvija",
-            "https://t.me/gribupardot",
-            "https://t.me/latgalite",
-            "https://t.me/balticmarket1",
-            "https://t.me/baraholkalatvija",
-            "https://t.me/tirdzins",
-            "https://t.me/tirgus",
-            "https://t.me/vipsaleee",
-            "https://t.me/MobileRiga",
-            "https://t.me/kopatichvapefleamarket" ]
+            # "https://t.me/buylatvija",
+            # "https://t.me/gribupardot",
+            "https://t.me/latgalite"]
+            # "https://t.me/balticmarket1",
+            # "https://t.me/baraholkalatvija",
+            # "https://t.me/tirdzins",
+            # "https://t.me/tirgus",
+            # "https://t.me/vipsaleee",
+            # "https://t.me/MobileRiga",
+            # "https://t.me/kopatichvapefleamarket" ]
 PHOTO_LOC = str('photo.jpg')
 TEXT = str("""КУПИМ ВАШ iPHONE
 
@@ -61,13 +61,15 @@ async def main():
             continue
 
         # send message with attachment (Supported MediaTypes: Photo, Video, Gif, Document, Audio, Sticker)
+        time_now = datetime.datetime.now()
         for TARGET in TARGETS:
             try:
                 await client.send_file(TARGET, file=PHOTO_LOC, caption=TEXT)
                 print("Message sent to ", TARGET)
-            except:
-                print("error in sending message")
-        time_now = datetime.datetime.now()
+                # wait from 1 minute to 5 minutes
+                time.sleep(60 * (1 + int.from_bytes(os.urandom(1), "big") % 5))
+            except Exception as e:
+                print('Failed to upload to ftp: ', e)
         pause.until(time_now + datetime.timedelta(hours=5))
 
 with client:
