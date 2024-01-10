@@ -53,7 +53,7 @@ async def main():
         except SessionPasswordNeededError:
             await client.sign_in(password=input('Password : '))
     while True:
-        if time is from 22:00 to 8:00, then continue
+        # if time is from 22:00 to 8:00, then continue
         if datetime.datetime.now().hour >= 22 or datetime.datetime.now().hour <= 8:
             print("Time is from 22:00 to 8:00, so we are waiting")
             time_now = datetime.datetime.now()
